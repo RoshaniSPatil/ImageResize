@@ -16,8 +16,7 @@ Change the imageNmaes,imagetypes with the below available lists.
 available imageNmaes:image1,image2,image3,image4,image5.
 available imageTypes:Original,Optimized
 
-example: 
-         1.http://localhost:8080/resize/images/image1?imagetype=Original
+example: 1.http://localhost:8080/resize/images/image1?imagetype=Original
          2.http://localhost:8080/resize/images/image1?imagetype=Optimized
 
 ## Architechture
