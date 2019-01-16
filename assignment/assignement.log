@@ -1,0 +1,480 @@
+2019-01-16 11:31:33.494  INFO 28166 --- [http-nio-8080-exec-3] c.i.assignment.AssignmentApplication     : The requested predefined image type does not exist.
+2019-01-16 11:31:36.374  INFO 28166 --- [http-nio-8080-exec-4] com.imgeresize.services.ImageHandlerImpl   : Fetching Image from storage
+2019-01-16 11:31:44.894  INFO 28166 --- [http-nio-8080-exec-6] c.i.assignment.AssignmentApplication     : The requested predefined image type does not exist.
+2019-01-16 11:32:33.273  INFO 28431 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28431 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 11:32:33.277  INFO 28431 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 11:32:34.132  INFO 28431 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 11:32:34.155  INFO 28431 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:32:34.156  INFO 28431 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 11:32:34.162  INFO 28431 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:32:34.230  INFO 28431 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:32:34.231  INFO 28431 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 911 ms
+2019-01-16 11:32:34.452  INFO 28431 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:32:34.642 ERROR 28431 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1004) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at com.imgeresize.applicationcontroller.AssignmentApplication.main(AssignmentApplication.java:35) [classes/:na]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_171]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_171]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_171]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_171]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_171]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1001) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	... 14 common frames omitted
+
+2019-01-16 11:32:34.647  INFO 28431 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-16 11:32:34.656  INFO 28431 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-16 11:32:34.661 ERROR 28431 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-01-16 11:32:34.663  INFO 28431 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:33:07.785  INFO 28438 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28438 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 11:33:07.788  INFO 28438 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 11:33:08.462  INFO 28438 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 11:33:08.478  INFO 28438 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:33:08.478  INFO 28438 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 11:33:08.483  INFO 28438 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:33:08.528  INFO 28438 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:33:08.528  INFO 28438 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 709 ms
+2019-01-16 11:33:08.673  INFO 28438 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:33:08.803 ERROR 28438 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1004) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at com.imgeresize.applicationcontroller.AssignmentApplication.main(AssignmentApplication.java:35) [classes/:na]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_171]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_171]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_171]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_171]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_171]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1001) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	... 14 common frames omitted
+
+2019-01-16 11:33:08.807  INFO 28438 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-16 11:33:08.814  INFO 28438 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-16 11:33:08.817 ERROR 28438 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-01-16 11:33:08.819  INFO 28438 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:33:31.465  INFO 28166 --- [http-nio-8080-exec-9] c.i.assignment.AssignmentApplication     : The requested predefined image type does not exist.
+2019-01-16 11:34:01.740  INFO 28166 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:34:10.345  INFO 28446 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28446 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 11:34:10.347  INFO 28446 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 11:34:11.083  INFO 28446 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 11:34:11.104  INFO 28446 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:34:11.105  INFO 28446 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 11:34:11.111  INFO 28446 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:34:11.168  INFO 28446 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:34:11.169  INFO 28446 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 787 ms
+2019-01-16 11:34:11.353  INFO 28446 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:34:11.531  INFO 28446 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 11:34:11.534  INFO 28446 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.457 seconds (JVM running for 1.915)
+2019-01-16 11:34:47.653  INFO 28446 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 11:34:47.653  INFO 28446 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 11:34:47.660  INFO 28446 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-01-16 11:34:47.694  INFO 28446 --- [http-nio-8080-exec-1] c.i.assignment.AssignmentApplication     : The requested predefined image type does not exist.
+2019-01-16 11:35:28.619  INFO 28446 --- [http-nio-8080-exec-3] com.imgeresize.services.ImageHandlerImpl   : Image will be optimized
+2019-01-16 11:36:55.262  INFO 28446 --- [http-nio-8080-exec-6] com.imgeresize.services.ImageHandlerImpl   : Image will be optimized
+2019-01-16 11:37:05.680  INFO 28446 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 11:37:05.682  INFO 28446 --- [RMI TCP Connection(14)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:37:07.071  INFO 28473 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28473 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 11:37:07.073  INFO 28473 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 11:37:07.842  INFO 28473 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 11:37:07.863  INFO 28473 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:37:07.864  INFO 28473 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 11:37:07.869  INFO 28473 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:37:07.927  INFO 28473 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:37:07.927  INFO 28473 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 821 ms
+2019-01-16 11:37:08.112  INFO 28473 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:37:08.298  INFO 28473 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 11:37:08.302  INFO 28473 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.503 seconds (JVM running for 1.995)
+2019-01-16 11:37:13.680  INFO 28473 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 11:37:13.681  INFO 28473 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 11:37:13.685  INFO 28473 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-01-16 11:37:13.716  INFO 28473 --- [http-nio-8080-exec-1] com.imgeresize.services.ImageHandlerImpl   : Image will be optimized
+2019-01-16 11:37:34.556  INFO 28473 --- [http-nio-8080-exec-3] com.imgeresize.services.ImageHandlerImpl   : Fetching Image from storage
+2019-01-16 11:37:44.789  INFO 28473 --- [http-nio-8080-exec-5] com.imgeresize.services.ImageHandlerImpl   : Image will be optimized
+2019-01-16 11:50:47.460  INFO 28473 --- [RMI TCP Connection(23)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 11:50:47.462  INFO 28473 --- [RMI TCP Connection(23)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:50:48.974  INFO 28578 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28578 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 11:50:48.977  INFO 28578 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 11:50:49.727  INFO 28578 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 11:50:49.746  INFO 28578 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:50:49.746  INFO 28578 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 11:50:49.751  INFO 28578 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:50:49.801  INFO 28578 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:50:49.802  INFO 28578 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 786 ms
+2019-01-16 11:50:49.960  INFO 28578 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 11:50:50.108  INFO 28578 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 11:50:50.111  INFO 28578 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.388 seconds (JVM running for 2.022)
+2019-01-16 11:51:24.010  INFO 28578 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 11:51:24.010  INFO 28578 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 11:51:24.015  INFO 28578 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-01-16 11:51:24.046  INFO 28578 --- [http-nio-8080-exec-1] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 11:52:24.422  INFO 28578 --- [http-nio-8080-exec-4] c.i.assignment.ImageHandlerImpl          : Image will be optimized
+2019-01-16 12:01:19.636  INFO 28578 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 12:01:19.638  INFO 28578 --- [RMI TCP Connection(16)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:01:21.032  INFO 28644 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28644 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 12:01:21.034  INFO 28644 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 12:01:21.784  INFO 28644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 12:01:21.804  INFO 28644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:01:21.805  INFO 28644 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 12:01:21.811  INFO 28644 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:01:21.868  INFO 28644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:01:21.868  INFO 28644 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 799 ms
+2019-01-16 12:01:22.049  INFO 28644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:01:22.233  INFO 28644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 12:01:22.236  INFO 28644 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.471 seconds (JVM running for 1.938)
+2019-01-16 12:03:26.698  INFO 28644 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 12:03:26.700  INFO 28644 --- [RMI TCP Connection(11)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:03:28.240  INFO 28661 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28661 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 12:03:28.243  INFO 28661 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 12:03:29.017  INFO 28661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 12:03:29.039  INFO 28661 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:03:29.039  INFO 28661 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 12:03:29.045  INFO 28661 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:03:29.105  INFO 28661 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:03:29.106  INFO 28661 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 813 ms
+2019-01-16 12:03:29.294  INFO 28661 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:03:29.459  INFO 28661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 12:03:29.462  INFO 28661 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.5 seconds (JVM running for 2.146)
+2019-01-16 12:03:37.130  INFO 28661 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 12:03:37.131  INFO 28661 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 12:03:37.135  INFO 28661 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-01-16 12:03:37.169  INFO 28661 --- [http-nio-8080-exec-1] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 12:03:45.189  INFO 28661 --- [http-nio-8080-exec-2] c.i.assignment.ImageHandlerImpl          : Image will be optimized
+2019-01-16 12:43:07.460  INFO 28661 --- [RMI TCP Connection(63)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 12:43:07.462  INFO 28661 --- [RMI TCP Connection(63)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:43:08.934  INFO 28967 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28967 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 12:43:08.936  INFO 28967 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 12:43:09.611  INFO 28967 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 12:43:09.628  INFO 28967 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:43:09.629  INFO 28967 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 12:43:09.634  INFO 28967 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:43:09.686  INFO 28967 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:43:09.686  INFO 28967 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 718 ms
+2019-01-16 12:43:09.847  INFO 28967 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:43:09.992  INFO 28967 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 12:43:09.996  INFO 28967 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.301 seconds (JVM running for 1.915)
+2019-01-16 12:43:35.946  INFO 28967 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 12:43:35.959  INFO 28967 --- [RMI TCP Connection(8)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:43:37.291  INFO 28971 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 28971 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 12:43:37.293  INFO 28971 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 12:43:38.057  INFO 28971 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 12:43:38.078  INFO 28971 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:43:38.078  INFO 28971 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 12:43:38.084  INFO 28971 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:43:38.145  INFO 28971 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:43:38.146  INFO 28971 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 822 ms
+2019-01-16 12:43:38.330  INFO 28971 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:43:38.512  INFO 28971 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 12:43:38.516  INFO 28971 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.495 seconds (JVM running for 1.945)
+2019-01-16 12:43:55.649  INFO 28971 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 12:43:55.649  INFO 28971 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 12:43:55.654  INFO 28971 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-01-16 12:43:55.685  INFO 28971 --- [http-nio-8080-exec-1] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 12:43:57.216  INFO 28971 --- [http-nio-8080-exec-4] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 12:44:04.025  INFO 28971 --- [http-nio-8080-exec-5] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 12:50:56.689  INFO 28971 --- [http-nio-8080-exec-8] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 12:51:13.623  INFO 28971 --- [http-nio-8080-exec-10] c.i.assignment.ImageHandlerImpl          : Image is optimized
+2019-01-16 12:51:39.212  INFO 28971 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 12:51:39.225  INFO 28971 --- [RMI TCP Connection(17)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:51:40.762  INFO 29045 --- [main] c.i.assignment.AssignmentApplication     : Starting AssignmentApplication on ZLP-061.local with PID 29045 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 12:51:40.765  INFO 29045 --- [main] c.i.assignment.AssignmentApplication     : No active profile set, falling back to default profiles: default
+2019-01-16 12:51:41.511  INFO 29045 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 12:51:41.529  INFO 29045 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:51:41.530  INFO 29045 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 12:51:41.535  INFO 29045 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:51:41.587  INFO 29045 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:51:41.587  INFO 29045 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 791 ms
+2019-01-16 12:51:41.745  INFO 29045 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 12:51:41.892  INFO 29045 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 12:51:41.895  INFO 29045 --- [main] c.i.assignment.AssignmentApplication     : Started AssignmentApplication in 1.386 seconds (JVM running for 1.974)
+2019-01-16 12:51:47.806  INFO 29045 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 12:51:47.806  INFO 29045 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 12:51:47.811  INFO 29045 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-01-16 12:51:47.842  INFO 29045 --- [http-nio-8080-exec-1] c.i.assignment.ImageHandlerImpl          : Image is optimized
+2019-01-16 12:52:51.552  INFO 29045 --- [http-nio-8080-exec-4] c.i.assignment.ImageHandlerImpl          : Image is optimized
+2019-01-16 12:53:07.956  INFO 29045 --- [http-nio-8080-exec-6] c.i.assignment.ImageHandlerImpl          : Fetching Image from storage
+2019-01-16 13:03:45.379  INFO 29045 --- [RMI TCP Connection(21)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 13:03:45.381  INFO 29045 --- [RMI TCP Connection(21)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 13:03:46.792  INFO 29140 --- [main] c.i.a.AssignmentApplication              : Starting AssignmentApplication on ZLP-061.local with PID 29140 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 13:03:46.794  INFO 29140 --- [main] c.i.a.AssignmentApplication              : No active profile set, falling back to default profiles: default
+2019-01-16 13:03:47.549  INFO 29140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 13:03:47.572  INFO 29140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:03:47.573  INFO 29140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 13:03:47.579  INFO 29140 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:03:47.640  INFO 29140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:03:47.640  INFO 29140 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 815 ms
+2019-01-16 13:03:47.683  WARN 29140 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'assignmentApplication': Unsatisfied dependency expressed through field 'imageHandler'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.imgeresize.services.ImageHandler' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-16 13:03:47.686  INFO 29140 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-16 13:03:47.696  INFO 29140 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-16 13:03:47.804 ERROR 29140 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field imageHandler in com.imgeresize.applicationcontroller.AssignmentApplication required a bean of type 'com.imgeresize.services.ImageHandler' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.imgeresize.services.ImageHandler' in your configuration.
+
+2019-01-16 13:05:59.143  INFO 29159 --- [main] c.i.a.AssignmentApplication              : Starting AssignmentApplication on ZLP-061.local with PID 29159 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 13:05:59.146  INFO 29159 --- [main] c.i.a.AssignmentApplication              : No active profile set, falling back to default profiles: default
+2019-01-16 13:05:59.881  INFO 29159 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 13:05:59.898  INFO 29159 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:05:59.899  INFO 29159 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 13:05:59.904  INFO 29159 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:05:59.952  INFO 29159 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:05:59.953  INFO 29159 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 776 ms
+2019-01-16 13:05:59.988  WARN 29159 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'assignmentApplication': Unsatisfied dependency expressed through field 'imageHandler'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.imgeresize.services.ImageHandler' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-16 13:05:59.990  INFO 29159 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-16 13:05:59.999  INFO 29159 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-16 13:06:00.070 ERROR 29159 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field imageHandler in com.imgeresize.applicationcontroller.AssignmentApplication required a bean of type 'com.imgeresize.services.ImageHandler' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.imgeresize.services.ImageHandler' in your configuration.
+
+2019-01-16 13:07:17.949  INFO 29171 --- [main] c.i.a.AssignmentApplication              : Starting AssignmentApplication on ZLP-061.local with PID 29171 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 13:07:17.951  INFO 29171 --- [main] c.i.a.AssignmentApplication              : No active profile set, falling back to default profiles: default
+2019-01-16 13:07:18.700  INFO 29171 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 13:07:18.720  INFO 29171 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:07:18.721  INFO 29171 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 13:07:18.727  INFO 29171 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:07:18.785  INFO 29171 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:07:18.786  INFO 29171 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 803 ms
+2019-01-16 13:07:18.983  INFO 29171 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 13:07:19.168  INFO 29171 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 13:07:19.171  INFO 29171 --- [main] c.i.a.AssignmentApplication              : Started AssignmentApplication in 1.48 seconds (JVM running for 1.946)
+2019-01-16 13:07:51.551  INFO 29171 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 13:07:51.552  INFO 29171 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 13:07:51.557  INFO 29171 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-01-16 13:07:51.584  INFO 29171 --- [http-nio-8080-exec-1] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:08:01.215  INFO 29171 --- [http-nio-8080-exec-3] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:08:12.161  INFO 29171 --- [http-nio-8080-exec-5] c.i.a.AssignmentApplication              : The requested predefined image type does not exist.
+2019-01-16 13:08:19.785  INFO 29171 --- [http-nio-8080-exec-6] c.imgeresize.services.ImageHandlerImpl   : Image is optimized
+2019-01-16 13:08:19.802  WARN 29171 --- [http-nio-8080-exec-6] com.imgeresize.services.ResizeImageImpl  : There is a problem writing the new (resized) image to the storage . Can't read input file!
+2019-01-16 13:08:19.802  INFO 29171 --- [http-nio-8080-exec-6] c.i.a.AssignmentApplication              : The requested source image does not exist
+2019-01-16 13:12:24.707  INFO 29171 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 13:12:24.709  INFO 29171 --- [RMI TCP Connection(15)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 13:12:26.321  INFO 29209 --- [main] c.i.a.AssignmentApplication              : Starting AssignmentApplication on ZLP-061.local with PID 29209 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 13:12:26.324  INFO 29209 --- [main] c.i.a.AssignmentApplication              : No active profile set, falling back to default profiles: default
+2019-01-16 13:12:27.080  INFO 29209 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 13:12:27.098  INFO 29209 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:12:27.099  INFO 29209 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 13:12:27.104  INFO 29209 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:12:27.154  INFO 29209 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:12:27.155  INFO 29209 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 784 ms
+2019-01-16 13:12:27.197  WARN 29209 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'assignmentApplication': Unsatisfied dependency expressed through field 'imageHandler'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imageHandlerImpl': Unsatisfied dependency expressed through field 'resizeImage'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resizeImageImpl': Unsatisfied dependency expressed through field 'imageFormat'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ".jpg"
+2019-01-16 13:12:27.199  INFO 29209 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-16 13:12:27.210  INFO 29209 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-16 13:12:27.224 ERROR 29209 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'assignmentApplication': Unsatisfied dependency expressed through field 'imageHandler'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imageHandlerImpl': Unsatisfied dependency expressed through field 'resizeImage'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resizeImageImpl': Unsatisfied dependency expressed through field 'imageFormat'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ".jpg"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at com.imgeresize.applicationcontroller.AssignmentApplication.main(AssignmentApplication.java:38) [classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imageHandlerImpl': Unsatisfied dependency expressed through field 'resizeImage'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resizeImageImpl': Unsatisfied dependency expressed through field 'imageFormat'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ".jpg"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1244) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resizeImageImpl': Unsatisfied dependency expressed through field 'imageFormat'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ".jpg"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1244) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: ".jpg"
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:79) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1192) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 45 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: ".jpg"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_171]
+	at java.lang.Integer.parseInt(Integer.java:569) ~[na:1.8.0_171]
+	at java.lang.Integer.valueOf(Integer.java:766) ~[na:1.8.0_171]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211) ~[spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 48 common frames omitted
+
+2019-01-16 13:12:56.578  INFO 29213 --- [main] c.i.a.AssignmentApplication              : Starting AssignmentApplication on ZLP-061.local with PID 29213 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 13:12:56.581  INFO 29213 --- [main] c.i.a.AssignmentApplication              : No active profile set, falling back to default profiles: default
+2019-01-16 13:12:57.327  INFO 29213 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 13:12:57.348  INFO 29213 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:12:57.348  INFO 29213 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 13:12:57.354  INFO 29213 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:12:57.414  INFO 29213 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:12:57.414  INFO 29213 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 799 ms
+2019-01-16 13:12:57.610  INFO 29213 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 13:12:57.784  INFO 29213 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 13:12:57.787  INFO 29213 --- [main] c.i.a.AssignmentApplication              : Started AssignmentApplication in 1.475 seconds (JVM running for 1.934)
+2019-01-16 13:13:02.751  INFO 29213 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 13:13:02.751  INFO 29213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 13:13:02.756  INFO 29213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-01-16 13:13:02.783  INFO 29213 --- [http-nio-8080-exec-1] c.imgeresize.services.ImageHandlerImpl   : Image is optimized
+2019-01-16 13:13:02.798  WARN 29213 --- [http-nio-8080-exec-1] com.imgeresize.services.ResizeImageImpl  : There is a problem writing the new (resized) image to the storage . Can't read input file!
+2019-01-16 13:13:02.798  INFO 29213 --- [http-nio-8080-exec-1] c.i.a.AssignmentApplication              : The requested source image does not exist
+2019-01-16 13:13:08.979  INFO 29213 --- [http-nio-8080-exec-3] c.imgeresize.services.ImageHandlerImpl   : Image is optimized
+2019-01-16 13:13:08.980  WARN 29213 --- [http-nio-8080-exec-3] com.imgeresize.services.ResizeImageImpl  : There is a problem writing the new (resized) image to the storage . Can't read input file!
+2019-01-16 13:13:08.980  INFO 29213 --- [http-nio-8080-exec-3] c.i.a.AssignmentApplication              : The requested source image does not exist
+2019-01-16 13:13:14.621  INFO 29213 --- [http-nio-8080-exec-5] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:13:20.270  INFO 29213 --- [http-nio-8080-exec-6] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:19:18.728  INFO 29213 --- [RMI TCP Connection(21)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-16 13:19:18.729  INFO 29213 --- [RMI TCP Connection(21)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-16 13:19:20.197  INFO 29258 --- [main] c.i.a.AssignmentApplication              : Starting AssignmentApplication on ZLP-061.local with PID 29258 (/Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment/target/classes started by Roshani in /Users/Roshani/Documents/workspace-spring-tool-suite-4-4.1.0.RELEASE/assignment.zip_expanded/assignment)
+2019-01-16 13:19:20.200  INFO 29258 --- [main] c.i.a.AssignmentApplication              : No active profile set, falling back to default profiles: default
+2019-01-16 13:19:20.954  INFO 29258 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-16 13:19:20.977  INFO 29258 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:19:20.978  INFO 29258 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-16 13:19:20.985  INFO 29258 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/Roshani/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:19:21.048  INFO 29258 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:19:21.049  INFO 29258 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 803 ms
+2019-01-16 13:19:21.245  INFO 29258 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-16 13:19:21.422  INFO 29258 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-16 13:19:21.426  INFO 29258 --- [main] c.i.a.AssignmentApplication              : Started AssignmentApplication in 1.467 seconds (JVM running for 2.103)
+2019-01-16 13:19:27.710  INFO 29258 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-16 13:19:27.710  INFO 29258 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-16 13:19:27.715  INFO 29258 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-01-16 13:19:27.742  INFO 29258 --- [http-nio-8080-exec-1] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:19:52.006  INFO 29258 --- [http-nio-8080-exec-4] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:20:00.015  INFO 29258 --- [http-nio-8080-exec-5] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
+2019-01-16 13:21:31.793  INFO 29258 --- [http-nio-8080-exec-8] c.imgeresize.services.ImageHandlerImpl   : Image is optimized
+2019-01-16 13:21:39.771  INFO 29258 --- [http-nio-8080-exec-9] c.imgeresize.services.ImageHandlerImpl   : Image is optimized
+2019-01-16 13:22:02.645  INFO 29258 --- [http-nio-8080-exec-2] c.imgeresize.services.ImageHandlerImpl   : Image is optimized
+2019-01-16 13:22:20.932  INFO 29258 --- [http-nio-8080-exec-5] c.imgeresize.services.ImageHandlerImpl   : Fetching Existing Image from storage
