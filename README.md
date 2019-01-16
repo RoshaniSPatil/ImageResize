@@ -21,9 +21,10 @@ examples:
 http://localhost:8080/resize/images/image1?imagetype=Original    
 http://localhost:8080/resize/images/image1?imagetype=Optimized    
 
+Please Note: File System/Project has to be refreshed to get Stored Optimized Image. And/Or Re-Run the project.
 
 ## Architechture
 Depending on the image type in the request the ImageHandler fetches the image from the file system else ResizeImage resizes 
 the image. 
 
-Note: Project needs to be refreshed to have the resized image in the file system available.
+
