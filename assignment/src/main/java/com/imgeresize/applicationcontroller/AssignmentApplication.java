@@ -43,7 +43,7 @@ public class AssignmentApplication {
    * @param imageType
    * @return
    */
-  @RequestMapping("/resize/image/{image-name}")
+  @RequestMapping("/resize/images/{image-name}")
   public ResponseEntity<?> resizeImage(@PathVariable("image-name") String imageName,
       @RequestParam("imagetype") String imageType) {
     final HttpHeaders headers = new HttpHeaders();
