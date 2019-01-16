@@ -13,6 +13,7 @@ mvn spring-boot:run
 Go to th brower and type url: http://localhost:8080/resize/images/{imageName}?imagetype={imageType}  
 
 Change the imageNmaes,imagetypes with the below available lists.
+
 available imageNmaes:image1,image3,image5.
 available imageTypes:Original,Optimized
 
