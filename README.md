@@ -13,16 +13,16 @@ mvn spring-boot:run
 Go to th brower and type url: http://localhost:8080/resize/images/{imageName}?imagetype={imageType}  
 
 Change the imageNmaes,imagetypes with the below available lists.
-available imageNmaes:image1,image2,image3,image4,image5.
+available imageNmaes:image1,image3,image5.
 available imageTypes:Original,Optimized
 
 examples: 
 1.http://localhost:8080/resize/images/image1?imagetype=Original
 2.http://localhost:8080/resize/images/image1?imagetype=Optimized
 
-Note:Please refrresh the filesystem to view stored image in project after run.
 
 ## Architechture
 Depending on the image type in the request the ImageHandler fetches the image from the file system else ResizeImage resizes 
-the image.  
+the image. 
+
 Note: Project needs to be refreshed to have the resized image in the file system available.
