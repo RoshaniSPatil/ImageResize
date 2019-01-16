@@ -14,12 +14,12 @@ Go to th brower and type url: http://localhost:8080/resize/images/{imageName}?im
 
 Change the imageNmaes,imagetypes with the below available lists.
 
-#available imageNmaes:image1,image3,image5.
-#available imageTypes:Original,Optimized
+Available imageNmaes:image1,image3,image5:
+Available imageTypes:Original,Optimized:
 
 examples: 
-1.http://localhost:8080/resize/images/image1?imagetype=Original
-2.http://localhost:8080/resize/images/image1?imagetype=Optimized
+http://localhost:8080/resize/images/image1?imagetype=Original
+http://localhost:8080/resize/images/image1?imagetype=Optimized
 
 
 ## Architechture
