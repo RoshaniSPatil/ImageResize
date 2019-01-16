@@ -20,6 +20,8 @@ examples:
 1.http://localhost:8080/resize/images/image1?imagetype=Original
 2.http://localhost:8080/resize/images/image1?imagetype=Optimized
 
+Note:Please refrresh the filesystem to view stored image in project after run.
+
 ## Architechture
 Depending on the image type in the request the ImageHandler fetches the image from the file system else ResizeImage resizes 
 the image.  
